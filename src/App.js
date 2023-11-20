@@ -1,10 +1,10 @@
-import React, { useEffect, useState } from "react"
+import React, { useState } from "react"
 import './App.css'
 
 function App() {
     const [taskList, setTaskList] = useState(['первое','второе','третье'])
     const [text, setText] = useState('')
-    const [hidenEdit,setHidenEdit] = useState(false)
+    const [hiddenEdit,setHiddenEdit] = useState(false)
     const [index, setIndex] = useState(null)
     const [editText, setEditText] = useState('')
     
@@ -30,7 +30,7 @@ function App() {
     }
 
     function editTask (i) {
-        setHidenEdit(true)
+        setHiddenEdit(true)
         setIndex(i)
         setEditText(taskList[i])
     }
@@ -43,7 +43,7 @@ function App() {
             <input onChange={ChangeEdit} value={editText}/>
             <button 
             onClick={() => {
-                setHidenEdit(false)
+                setHiddenEdit(false)
                 setTaskList([...taskList.slice(0,index),editText,...taskList.slice(index+1)])
             }}
             >
@@ -81,7 +81,7 @@ function App() {
                     Добавить задачу
                 </button>
             </div>
-            {hidenEdit && edit()}
+            {hiddenEdit && edit()}
             <div className="sort">
                 <button className="SortList" onClick={SortList}>А-Я</button>
             </div>
