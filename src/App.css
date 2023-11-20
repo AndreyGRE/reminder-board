@@ -1,38 +1,78 @@
 .App {
   text-align: center;
 }
-
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.SortList{
+  max-width: 400px;
 }
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+button{
+  height: 20%;
+  min-height: 30px ;
+  width: 40%;
+  min-width: 30px;
+  background: linear-gradient(to bottom right, rgb(238, 133, 215), pink);
+  border-radius: 32px;
+  border: none;
+  cursor: pointer;
+  margin: 1%;
 }
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+input{
+  background: none;
+  border-radius: 32px;
+  padding-left: 2%;
+  width: 30%;
+}
+.newTaskList {
+  position: relative;
+  border: solid 1px rgb(179, 179, 179);
+  border-radius: 32px;
+  width: 40%;
+  padding: 20px 0;
+  margin: auto;
+  max-width: 400px;
+}
+.button{
   display: flex;
-  flex-direction: column;
-  align-items: center;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+}
+.List {
+  position: relative;
+  top: 10px;
+  width: 40%;
+  margin: 10px auto;
+  border: solid 1px rgb(179, 179, 179);
+  border-radius: 32px;
+  padding: 10px 0;
+  max-width: 400px;
+
 }
 
-.App-link {
-  color: #61dafb;
+.edit {
+  width: 40%;
+  margin: 10px auto;
+  border: 1px solid rgb(228, 74, 74);
+  border-radius: 32px;
+  padding: 10px 0;
+  overflow: hidden;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
+.removeEl {
+  opacity: 0;
+  transition: opacity 0.20s;
+}
+
+.CompletedTask {
+  transition: background-color 0.1s;
+  background-color: rgb(224, 197, 230);
+}
+
+.newEllement {
+  animation-name: newEllement;
+  animation-duration: 1s;
+}
+
+@keyframes newEllement {
+  from { opacity: 0;
   }
-  to {
-    transform: rotate(360deg);
+  to{ opacity: 1;
   }
 }
